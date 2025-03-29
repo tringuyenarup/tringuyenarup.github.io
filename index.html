@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri Ky Nguyen - CV</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Variables */
+        :root {
+            --primary: #2563eb;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --accent: #3b82f6;
+            --text: #64748b;
+            --border: #e2e8f0;
+        }
+        
+        /* Base */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        
+        /* Header */
+        header {
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid var(--primary);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .role {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Main Content */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        section {
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .date {
+            color: var(--text);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .skill-tag {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+        
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background-color: var(--accent);
+        }
+        
+        /* Dark Theme */
+        body.dark-theme {
+            --light: #0f172a;
+            --dark: #f8fafc;
+            --text: #94a3b8;
+            --border: #334155;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle">
+        ☀️
+    </button>
+
+    <!-- Header Section -->
+    <header>
+        <img src="./data/photo.jpg" alt="Ky Tri Nguyen Profile" class="profile-image">
+        <h1>KY TRI NGUYEN</h1>
+        <p class="role">Transport Modeller & Data Scientist</p>
+        <p>Transport Modeller at ARUP Melbourne with a PhD in Transport Modelling from Monash University. I specialise in developing analytical frameworks and data-driven solutions for complex transportation problems with expertise spanning activity-based modelling, simulation, optimisation, and implementing high-performance tools.</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📧</span>
+                <a href="mailto:kytringuyen95@gmail.com">kytringuyen95@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span>🔗</span>
+                <a href="https://www.linkedin.com/in/tri-ky-nguyen-8260731a9/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <span>💻</span>
+                <a href="https://github.com/tringuyenarup" target="_blank">GitHub</a>
+            </div>
+            <div class="contact-item">
+                <span>📚</span>
+                <a href="https://scholar.google.com/citations?user=vqG6gpsAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Left Column -->
+        <div class="left-column">
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <h3>Programming Languages</h3>
+                <ul class="skills-list">
+                    <li class="skill-tag">Python</li>
+                    <li class="skill-tag">Java</li>
+                    <li class="skill-tag">SQL</li>
+                    <li class="skill-tag">Rust</li>
+                    <li class="skill-tag">JavaScript</li>
+                </ul>
+                
+                <h3>Frameworks & Platforms</h3>
+                <ul class="skills-list">
+                    <li class="skill-tag">ObservableHQ</li>
+                    <li class="skill-tag">Svelte</li>
+                    <li class="skill-tag">Actix</li>
+                    <li class="skill-tag">Flask</li>
+                    <li class="skill-tag">MATSim</li>
+                </ul>
+                
+                <h3>Libraries & Tools</h3>
+                <ul class="skills-list">
+                    <li class="skill-tag">Pandas</li>
+                    <li class="skill-tag">NumPy</li>
+                    <li class="skill-tag">Polars</li>
+                    <li class="skill-tag">Keras</li>
+                    <li class="skill-tag">Scikit-learn</li>
+                    <li class="skill-tag">SciPy</li>
+                    <li class="skill-tag">Matplotlib</li>
+                    <li class="skill-tag">Gurobi</li>
+                    <li class="skill-tag">D3.js</li>
+                </ul>
+                
+                <h3>Domain Expertise</h3>
+                <ul class="skills-list">
+                    <li class="skill-tag">Transport Modeling</li>
+                    <li class="skill-tag">Activity-Based Models</li>
+                    <li class="skill-tag">Agent-Based Simulation</li>
+                    <li class="skill-tag">Optimization</li>
+                    <li class="skill-tag">Logit-Based Models</li>
+                    <li class="skill-tag">Population Synthesis</li>
+                    <li class="skill-tag">Shared Mobility</li>
+                    <li class="skill-tag">Data Visualization</li>
+                </ul>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>PhD in Transport Modeling</h3>
+                    <p>Monash University, Clayton, Victoria, Australia</p>
+                    <p class="date">2019 - 2022</p>
+                    <p>Supervisor: Prof. Hai Le Vu<br>Co-Supervisor: Dr. Hoang Hong Nam</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor of Electrical and Telecommunication Engineering</h3>
+                    <p>Da Nang University of Science and Technology, Vietnam</p>
+                    <p class="date">2013 - 2018</p>
+                    <p>GPA: 8.7/10.0 (3.7/4.0)<br>Rank: 2/39</p>
+                </div>
+            </section>
+
+            <section id="awards">
+                <h2>Awards & Honors</h2>
+                <ul>
+                    <li>Innovative Project for the New Zealand ABM Project (ARUP) | 2023</li>
+                    <li>Research Training Program (RTP) Stipend | 2018</li>
+                    <li>Monash International Tuition Scholarship (MITS) | 2018</li>
+                    <li>Best position paper for Committee on Global Competitiveness S Rajaratnam Endowment -- Youth Model ASEAN Conference | 2017</li>
+                    <li>Sunflower Mission Scholarship of Esilicon Corporation | 2015-2017</li>
+                </ul>
+            </section>
+
+            <section id="publications">
+                <h2>Publications</h2>
+                <ul>
+                    <li>"A unified activity-based framework for one-way car-sharing services in multi-modal transportation networks" - <em>Transportation Research Part E: Logistics and Transportation Review 157, 102551 (2022)</em></li>
+                    <li>"A Dynamic, Activity-Based Model Considering Free-Floating Carsharing Service" - <em>Transportation Research Board 101st Annual Meeting (2022)</em></li>
+                    <li>"Studying the Impact of Public Transport on Disaster Evacuation" - <em>2020 IEEE 23rd International Conference on Intelligent Transportation Systems (ITSC)</em></li>
+                    <li>"Generating Service Boundaries for Endovascular Clot Retrieval Hospitals Using Multi-agent Transport Simulation Model" - <em>Transportation Research Board 99th Annual Meeting (2019)</em></li>
+                </ul>
+                <p><a href="https://scholar.google.com/citations?user=vqG6gpsAAAAJ&hl=en" target="_blank">View Full Publication List on Google Scholar</a></p>
+            </section>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <section id="experience">
+                <h2>Work Experience</h2>
+                <div class="experience-item">
+                    <h3>Transport Modeller</h3>
+                    <p>ARUP Melbourne</p>
+                    <p class="date">March 2022 - Present</p>
+                    <ul>
+                        <li>Developed analytical frameworks using activity-based models for New Zealand and Victoria in a massive two-year project that was recognized as the most innovative project in the Australasia region in 2023, enabling systematic testing of transport and land use options.</li>
+                        <li>Designed high-performance tools using Python, JavaScript, and Rust to process data efficiently for business case assessments and economic appraisals.</li>
+                        <li>Created new encoding methodology for SCATS data that reduced data storage requirements and enabled different visualisation operations with new data format.</li>
+                        <li>Created dashboards, visualisations, and reports for projects including High-Speed Rail, Melbourne Airport Carpark Prediction, and MR5 project with numerous charts and visualisations.</li>
+                        <li>Involved in various research projects within the company to enhance technical capabilities across the Australasia region, driving innovation and knowledge sharing.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Practice Class Assistant & Research Assistant</h3>
+                    <p>Monash University</p>
+                    <p class="date">2019 - 2022</p>
+                    <ul>
+                        <li>Tutored graduate and undergraduate courses in Traffic Engineering and Transport Engineering.</li>
+                        <li>Mentored student groups with final year projects on intelligent transport systems.</li>
+                        <li>Worked on external projects related to smart cities and agent-based modeling using Melbourne Activity-based Model (MABM).</li>
+                        <li>Developed deep learning models to predict parking bay occupancy rates in Monash City.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Internship</h3>
+                    <p>Department of Transport Victoria</p>
+                    <p class="date">2019 - February 2020</p>
+                    <ul>
+                        <li>Helped predict changes in commuter behavior caused by growing demand, diverse travel preferences, and disruptions.</li>
+                        <li>Assisted the department in gaining insights from Melbourne Activity-Based Model (MABM) and developed user guides.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Featured Projects</h2>
+                <div class="project-item">
+                    <h3>New Zealand Activity-Based Model</h3>
+                    <p>Developed an analytical framework using transport activity-based modeling to assess existing demands and project future needs across New Zealand's transport system.</p>
+                    <p><strong>Technologies:</strong> Python, Logit Models, Data Analysis</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>High-Speed Rail Visualisation</h3>
+                    <p>Created interactive dashboards and data visualisations to communicate key metrics and insights for a High-Speed Rail project feasibility study.</p>
+                    <p><strong>Technologies:</strong> JavaScript, ObservableHQ, D3.js, SQL</p>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Melbourne Airport Carpark Prediction</h3>
+                    <p>Developed predictive models to forecast parking occupancy rates at Melbourne Airport, enabling better resource allocation and planning.</p>
+                    <p><strong>Technologies:</strong> Python, Machine Learning, Data Visualisation, SQL</p>
+                </div>
+                
+                <div class="project-item">
+                    <h3>COVID-19 Virus Spread Modelling</h3>
+                    <p>Enhanced virus spread modelling by integrating activity-travel patterns, providing more accurate predictions of transmission in urban environments.</p>
+                    <p><strong>Technologies:</strong> Agent-Based Modelling, Python, Epidemiological Models, SQL</p>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Carsharing Services Framework</h3>
+                    <p>Developed a unified activity-based framework for one-way car-sharing services in multi-modal transportation networks, optimizing fleet management.</p>
+                    <p><strong>Technologies:</strong> Java, MATSim, Optimisation</p>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Public Transport in Disaster Evacuation</h3>
+                    <p>Studied the impact of public transport systems during disaster evacuations, identifying critical factors for improving evacuation efficiency.</p>
+                    <p><strong>Technologies:</strong> Simulation, Network Analysis, Python, SQL</p>
+                </div>
+            </section>
+            
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Transport Modeller at ARUP Melbourne with a PhD in Transport Modelling from Monash University. I specialise in developing analytical frameworks and data-driven solutions for complex transportation problems. My expertise spans activity-based modelling, simulation, optimisation, and implementing high-performance tools using Python, JavaScript, and Rust. I excel in data science methodologies and create compelling data visualisations that transform complex transportation data into actionable insights for stakeholders and decision-makers.</p>
+                <p>With my research background, I excel at solving hard, technical problems that are uncommon in the consulting world. I can tackle a wide range of complex transportation challenges, quickly adapt to new technologies, and learn rapidly in changing environments. I'm passionate about creating intelligent transport solutions that improve urban mobility and contribute to smarter, more sustainable cities.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>Last updated: March 2025</p>
+    </footer>
+
+    <!-- JavaScript for theme toggle -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or use preferred color scheme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeToggle.textContent = '🌙';
+        } else if (savedTheme === 'light') {
+            body.classList.remove('dark-theme');
+            themeToggle.textContent = '☀️';
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            body.classList.add('dark-theme');
+            themeToggle.textContent = '🌙';
+        }
+        
+        // Theme toggle functionality
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-theme');
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
